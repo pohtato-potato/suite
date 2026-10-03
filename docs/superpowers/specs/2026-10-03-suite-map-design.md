@@ -1,7 +1,7 @@
 # The app family: map and shared rules
 
 **Date:** 3 October 2026
-**Status:** agreed in conversation; written up for review.
+**Status:** approved by the owner on 3 October 2026.
 **Scope:** how the personal web apps fit together, who owns which data, what passes between them, the groundwork they share, and the order to build them in. Each app still gets its own design round and its own spec.
 
 ## 1. Purpose
@@ -32,7 +32,7 @@ These come from Health and Logbook and hold for every app in the family:
 | **Media** | Next to build | An in-depth collection of films, shows, books and other works, with ratings, reviews and what you took from them. |
 | **Inventory** | Planned, second | Everything owned and wanted, with the wardrobe at its centre. |
 | **Places** | Planned, third | Places, visits and the map, including the Google Maps Timeline import. |
-| **Commonplace** | Maybe, parked | A commonplace book: passages and ideas collected by topic, from any source. |
+| **Commonplace** | Parked | A commonplace book: passages and ideas collected by topic, from any source. Revisit after a few months of using Media. |
 
 Dropped: **People.** People stay in Logbook.
 
@@ -92,13 +92,13 @@ Health's v1 postcard keeps working unchanged until both Health and Logbook have 
 
 ### 6.2 A home for this map and the contracts
 
-A new small public repository, `pohtato-potato/suite`, holding no personal data:
+The public repository `pohtato-potato/suite` (created by the owner, 3 October 2026), holding no personal data:
 
 - this map;
 - every postcard format's fixture file (starting with `postcard-v1.json` from Health and Logbook);
 - a short list of which app writes and reads each format.
 
-Each app keeps a copy of the fixtures it uses. Its tests check that copy against the suite's version, so a format can't drift in one app unnoticed. Creating the repository on GitHub needs the owner's go-ahead; until then the folder exists only on the PC.
+Each app keeps a copy of the fixtures it uses. Its tests check that copy against the suite's version, so a format can't drift in one app unnoticed. Pushing to it still needs the owner's go-ahead each time.
 
 ### 6.3 One backup place
 
@@ -133,8 +133,8 @@ Everything here is a starting list for Inventory's own design round, not a decis
 
 ## 9. Open questions
 
-- **Commonplace:** confirm it stays parked until Media has been in use for a while (proposed, not yet confirmed).
-- **Section 4's table** was proposed and not separately confirmed. Check it before Media's spec relies on it.
+Settled on 3 October 2026: Commonplace stays parked until Media has been in use for a while, and the ownership table in section 4 is confirmed.
+
 - **More flows** (section 5) will be added as each app is designed. Each new flow is added here as well as in the two apps' specs.
 
 ## 10. Out of scope
